@@ -1,19 +1,6 @@
-language: node_js
 node_js:
-  - stable
+  - "iojs"
   - "5.5"
 
 
-script: npm run-script deploy
-env:
- global:
- - GH_REF: github.com/raphi1790/TravisTest.git
- - secure: RIbIq8hI153J5trRa........
-
- language: generic # don't install any environment
-
-script: bash ./travis-deploy.sh
-env:
-  global:
-  - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
-  - COMMIT_AUTHOR_EMAIL: "you@example.com"
+script: npm run build
