@@ -4,8 +4,16 @@ node_js:
   - "5.5"
 
 
-script:
-  # run build script specified in package.json
-  - npm run build
-  # call script for deploying of produced artifacts
-  - bash ./.travis-deploy.sh
+script: npm run-script deploy
+env:
+ global:
+ - GH_REF: github.com/raphi1790/TravisTest.git
+ - secure: RIbIq8hI153J5trRa........
+
+ language: generic # don't install any environment
+
+script: bash ./travis-deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
+  - COMMIT_AUTHOR_EMAIL: "you@example.com"
