@@ -6,6 +6,6 @@ node_js:
 
 script:
   # run build script specified in package.json
-  - npm run build
+  - node server.js
   # call script for deploying of produced artifacts
   - bash ./.travis-deploy.sh
