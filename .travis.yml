@@ -2,6 +2,10 @@ node_js:
   - "iojs"
   - "5.5"
 
-before_script: cd travis-app
+before_script: 
+  - cd travis-app
+  - npm install 
 
-script:  npm run build
+
+script:  
+  - npm run build

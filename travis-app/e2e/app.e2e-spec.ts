@@ -1,14 +1,14 @@
-import { TravisAppPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('travis-app App', function() {
-  let page: TravisAppPage;
+describe('travis-app App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new TravisAppPage();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
